@@ -66,7 +66,7 @@ const CartPage: FC = () => {
                 variant="outlined"
                 disabled={isAuth}
                 size="large">
-                {isAuth ? 'Оплатить' : 'Войдите'}
+                {!isAuth ? 'Оплатить' : 'Войдите'}
               </Button>
             </div>
           </div>
