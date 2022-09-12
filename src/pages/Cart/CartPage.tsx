@@ -64,9 +64,9 @@ const CartPage: FC = () => {
                 onClick={onSendOrder}
                 color="inherit"
                 variant="outlined"
-                disabled={isAuth}
+                disabled={!isAuth}
                 size="large">
-                {!isAuth ? 'Оплатить' : 'Войдите'}
+                {isAuth ? 'Оплатить' : 'Войдите'}
               </Button>
             </div>
           </div>
