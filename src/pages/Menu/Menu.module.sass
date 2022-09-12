@@ -1,0 +1,49 @@
+.Menu
+    display: flex
+    flex-direction: row
+    justify-content: center
+    background-color: white
+    min-height: calc( 100vh - 51px )
+    margin-top: 50px
+    width: 100%
+    &_layout
+        background-color: white
+        display: flex
+        flex-direction: column
+        width: 1200px
+        text-align: center
+        @media screen and ( max-width:  768px)
+            width: 100%
+    &_title
+        font-weight: bold
+        font-size: 2em
+        color: lightgrey
+    &_nav
+        display: flex
+        justify-content: center
+        margin: 20px 0
+        flex-wrap: wrap
+        &__item
+            margin: 2px 2px
+            background: #fff
+            border: 1px solid black
+            padding: 10px
+            border-radius: 50px
+            cursor: pointer
+            min-width: 70px
+            overflow: hidden
+            &:hover
+                background: #4f4f4f
+                color: #fff
+            &__active
+                @extend .Menu_nav__item
+                background: #2e2e2e
+                color: #fff
+    &_Products
+        display: flex
+        justify-content: center
+        align-items: flex-start
+        padding: 10px
+        flex-wrap: wrap
+        @media screen and ( max-width:  768px)
+            padding: 10px 0px

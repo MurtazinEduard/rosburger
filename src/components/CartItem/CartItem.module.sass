@@ -1,0 +1,45 @@
+@import '../../css/_variables'
+.Main
+    display: grid
+    grid-template-columns: repeat(5, 1fr)
+    justify-items: center
+    align-items: center
+    font-size: 1.5em
+    color: #000
+    @media screen and ( max-width:  768px)
+        font-size: 1em
+.counter
+    display: flex
+    justify-content: space-between
+.Cart
+    &_item
+        &__img
+            img
+                width: 100px
+                height: 100px
+                @media screen and ( max-width:  768px)
+                    width: 50px
+                    height: 50px
+        &__counter
+            display: grid
+            grid-template-columns: repeat(5, 1fr)
+            align-items: center
+            &__plus
+                margin-bottom: -10px
+                color: $_orange
+                cursor: pointer
+            &__minus
+                @extend .Cart_item__counter__plus
+        &__close
+            @extend .Cart_item__counter__plus
+.EmptyCart
+    &_links
+        display: flex
+        justify-content: space-between
+        color: $_orange
+        align-items: center
+            
+.Link
+    text-decoration: none
+    &:visited
+        color: $_orange

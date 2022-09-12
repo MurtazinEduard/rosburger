@@ -1,0 +1,44 @@
+@import '../../css/_variables'
+.wrapper
+    height: calc( 100vh - 51px )
+    width: 100%
+    margin-top: 50px
+    background: #fff
+    display: flex
+    justify-content: center
+    .Orders
+        width: 1200px
+        background: #fff
+        &_title
+            display: flex
+            justify-content: space-between
+            font-size: 2em
+            font-weight: bold
+            color: lightgrey
+            @media screen and ( max-width:  768px)
+                font-size: 1.2em
+                margin-top: 20px
+            a
+                color: $_orange
+        &_main
+            display: flex
+            flex-direction: column
+            margin-top: 50px
+            @media screen and ( max-width:  768px)
+                margin-top: 20px
+            &__item
+                display: flex
+                flex-direction: column
+                &__title
+                    text-align: center
+                    font-weight: bold
+                    margin: 10px 0px
+                &__info
+                    display: grid
+                    grid-template-columns: 1fr 1fr 3fr
+                    @media screen and ( max-width:  768px)
+                        grid-template-columns: 1fr 1fr 2fr
+                    &__products
+                        overflow: hidden
+                        text-overflow: ellipsis
+

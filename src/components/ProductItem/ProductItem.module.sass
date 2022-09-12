@@ -1,0 +1,60 @@
+@import '../../css/_variables'
+.Product
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    width: 300px
+    background: #ffffff
+    height: 450px
+    box-sizing: border-box
+    margin: 10px
+    padding: 5px 5px
+    border-radius: 10px
+    box-shadow: 0px 0px 10px #ededed
+    color: grey
+    @media screen and ( max-width:  768px)
+        width: 100%
+        border-radius: 0px
+        margin: 0px
+        box-shadow: none
+        margin-bottom: 10px
+    &:hover
+        box-shadow: 0px 0px 10px #dddddd
+        @media screen and ( max-width:  768px)
+            box-shadow: none
+    &_img
+        display: flex
+        width: 250px
+        height: 250px
+    &_title
+        display: flex
+        font-weight: bold
+        color: grey
+        font-size: 1.5em
+        flex-wrap: wrap
+    &_subtitle
+        font-size: 1em
+        display: flex
+        flex-wrap: wrap
+        overflow: hidden
+        text-overflow: ellipsis
+    &_footer
+        display: flex
+        justify-content: space-around
+        &__buttons
+            display: flex
+            align-items: center
+            &__count
+                font-size: 1.2em
+                margin-bottom: 5px
+            &__plusMinus
+                color: $_orange
+                font-size: 3em
+                margin-bottom: 10px
+                margin-left: 15px
+                cursor: pointer
+.Link
+    color: $_orange
+    &:visited
+        color: $_orange
